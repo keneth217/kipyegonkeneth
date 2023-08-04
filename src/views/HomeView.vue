@@ -15,18 +15,19 @@
         <v-btn class="white-text my-5 mx-2" color="success" rounded
           >Get started</v-btn
         > -->
-        <v-btn class="white-text text-center mx-2" color="indigo" rounded>
-          <router-view to="/details">
-            about
+        <v-btn 
+      
+        class="white-text  text-center mx-2 text-decoration-none" color="indigo" rounded>
+          <router-link
+          style="text-decoration: none; color: inherit;"
+           to="/details">
+            about me
           <!-- <v-icon>mdi-play-circle</v-icon> ABOUT ME. -->
-        </router-view>
+        </router-link>
         </v-btn>
-        <router-view to="/details">
-          about
-        <!-- <v-icon>mdi-play-circle</v-icon> ABOUT ME. -->
-      </router-view>
+        
       </v-col>
-      <v-col lg="6" sm="12" class="text-end text-center">
+      <v-col lg="6" sm="12" class="text-end text-center hidden-sm-and-down ">
         <v-img
           class="text-end move-all-directions"
           width="500"
