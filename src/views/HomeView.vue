@@ -1,18 +1,102 @@
 <template>
-  <HelloWorld />
+  <v-container color="background" fluid class="background">
+    <v-row class="">
+      <v-col lg="6" sm="12">
+        <h2 class="intro text-center">Bonjour</h2>
+        <p class="description">
+          Our mission is to provide you with a seamless solutions experience,
+          ensuring you find exactly what you are looking for. We take great
+          pride in delivering top-notch technological services, and our
+          knowledgeable team is always ready to assist you with any inquiries or
+          concerns you may have.Your satisfaction is our top priority, and we
+          strive to exceed your expectations with every interaction.
+        </p>
+        <!-- <h4 class="intro mb-3">Happy shopping!</h4>
+        <v-btn class="white-text my-5 mx-2" color="success" rounded
+          >Get started</v-btn
+        > -->
+        <v-btn class="white-text text-center mx-2" color="indigo" rounded>
+          <router-view to="/details">
+            about
+          <!-- <v-icon>mdi-play-circle</v-icon> ABOUT ME. -->
+        </router-view>
+        </v-btn>
+        <router-view to="/details">
+          about
+        <!-- <v-icon>mdi-play-circle</v-icon> ABOUT ME. -->
+      </router-view>
+      </v-col>
+      <v-col lg="6" sm="12" class="text-end text-center">
+        <v-img
+          class="text-end move-all-directions"
+          width="500"
+          height="500"
+          cover
+          src="./../assets/hero.png"
+          alt="hero-image"
+        >
+        </v-img>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
+<script></script>
 
-<script>
-import { defineComponent } from 'vue';
+<style>
+.background {
+  background-image: url(./../assets/logo.svg);
+  width: 100%;
+  height: 800px;
+  display: block;
 
-// Components
-import HelloWorld from '../components/HelloWorld.vue';
+  background-size: cover;
+  top: 0;
+}
+h2.intro {
+  font-size: 60px;
+  font: bold;
+  font-family: cursive;
+  color: #f60de7;
+}
+h4.intro {
+  font-size: 40px;
+  font: bold;
+  font-family: cursive;
+  color: #41e40a;
+}
+p.description {
+  font-size: 20px;
+  margin: 32px 0px;
+  font-family: cursive;
+  color: #f5f1f1ef;
+}
+/* Define the initial position of the image */
+.move-all-directions {
+  position: relative;
+  animation: moveAnimation 20s infinite;
+}
 
-export default defineComponent({
-  name: 'HomeView',
+@keyframes moveAnimation {
+  /* Move up-left */
+  0%,
+  100% {
+    top: 0;
+    left: 0;
+  }
 
-  components: {
-    HelloWorld,
-  },
-});
-</script>
+  /* Move down */
+  25% {
+    top: 50px;
+  }
+
+  /* Move right */
+  50% {
+    left: 50px;
+  }
+
+  /* Move up */
+  75% {
+    top: 0;
+  }
+}
+</style>
