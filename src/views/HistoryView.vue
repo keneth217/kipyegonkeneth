@@ -53,7 +53,7 @@ export default {
         title: "tertiary level of education",
         color: "green-lighten-1",
         icon: "mdi-layers-triple",
-        desc:"Arwaded Degree in Software Engineering",
+        desc:"Awarded Degree in Software Engineering",
         period:"september,2018 to July 2023"
       },
       {

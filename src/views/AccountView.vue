@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="background-image text-center justify-center d-flex">
+  <v-container fluid class="background-image text-center bg justify-center d-flex">
     
   <v-card class="text-center justify-center mt-15" style="width: 400px">
     <v-toolbar color="deep-purple-accent-4" cards dark flat>
@@ -70,8 +70,11 @@ export default {
 };
 </script>
 <style>
+.bg{
+  background-color: rgb(152, 152, 144);
+}
 .background-image {
-  background-color: blueviolet;
+  
   background-position: center;
  
 }

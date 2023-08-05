@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid class="text-center">
+  <v-container fluid class="text-center bg ">
     <v-row>
-      <v-col lg="12 " sm="12" class="text-center back mt-15 mb-15">
+      <v-col lg="12 " sm="12" class="text-center  back ">
         <div class="text-center ">
-          <h6 class="text-h4 text-center justify-center  text-deep-orange-lighten-1"
+          <h6 class="text-h4 text-center justify-center "
             >Get In Touch</h6
           >
         </div>
@@ -98,18 +98,22 @@ const submit = handleSubmit((values) => {
 });
 </script>
 <style scoped>
+.bg{
+  background-color: rgb(152, 152, 144);
+}
 .back{
   background-image: url(./../assets/straight.svg);
   width: 100%;
-  height: 100px;
+  height: 200px;
   display: block;
   background-size: cover;
-  top: 50px;
+  top: 0px;
   bottom: 50px;
 }
 .title{
-  color: #a31181;
-  box-shadow: 5px;
+  font-size: 30px;
+  color: #bd2d9b;
+  text-shadow: 5px 2px 5px rgb(203, 196, 203);
   font-family: 'Times New Roman', Times, serif;
 }
 </style>

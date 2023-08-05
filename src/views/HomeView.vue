@@ -1,5 +1,5 @@
 <template>
-  <v-container color="background" fluid class="background">
+  <v-container color="background" fluid class="background bg">
     <v-row class="">
       <v-col lg="6" sm="12">
         <h2 class="intro text-center">Bonjour</h2>
@@ -44,6 +44,9 @@
 <script></script>
 
 <style>
+.bg{
+  background-color: #b6eea3;
+}
 .background {
   background-image: url(./../assets/logo.svg);
   width: 100%;

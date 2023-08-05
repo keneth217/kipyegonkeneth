@@ -1,5 +1,5 @@
 <template>
- <v-container fluid class="mt-0 text-center about">
+ <v-container fluid class="mt-0 text-center about bg">
   <v-row>
     <v-col lg="12">
       <div class="text-center ">
@@ -8,7 +8,7 @@
     </v-col>
   </v-row>
  </v-container>
- <v-container fluid class="mt-10 text-center abo">
+ <v-container fluid class="mt-10 text-center">
   <v-row>
     <v-col lg="12">
       <div class="text-center ">
@@ -35,6 +35,9 @@
 
 </template>
 <style scoped>
+.bg{
+  background-color: rgb(152, 152, 144);
+}
 .about{
   background-image: url(./../assets/contact.svg);
   width: 100%;

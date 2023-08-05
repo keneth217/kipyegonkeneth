@@ -39,7 +39,7 @@
                 size="x-small"
               >
                 <div class="mb-2">
-                  <div class="font-weight-normal">
+                  <div class="font-weight-bold">
                     <strong>{{ skill.language }}</strong>
                   </div>
                   <div>{{ skill.lang }}</div>
@@ -49,7 +49,15 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col lg="6"> </v-col>
+      <v-col justify="center" class="text-center" lg="12"> 
+       <v-btn color="primary" >
+        <router-link class="more" to="/history">know more</router-link>
+        <v-tooltip
+        activator="parent"
+        location="end"
+      >EDUCATION & EXPERIENCE</v-tooltip>
+      </v-btn>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -110,5 +118,8 @@ export default {
 }
 .hist {
   background-color: #b0aaaa;
+}
+.more{
+  text-decoration: none;
 }
 </style>
