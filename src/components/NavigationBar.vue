@@ -17,7 +17,7 @@
     style="padding: 0px 90px"
     app
     class="bar"
-    color="pink"
+    color="primary"
     elevate-on-scroll
   >
     <!-- <v-app-bar-nav-icon @click="toggleDrawer" /> -->
@@ -40,7 +40,6 @@
 
 <script>
 export default {
-  name: "NavigationBar",
   data() {
     return {
       drawer:false,
