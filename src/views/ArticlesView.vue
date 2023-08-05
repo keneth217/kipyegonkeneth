@@ -25,7 +25,7 @@
           </v-img>
           <v-divider></v-divider>
           <div class="text-start mb-0 text-sm">
-            <p class="text-center">{{ lesson.title }}</p>
+            <strong> <p class="text-center art">{{ lesson.title }}</p> </strong>
             <p>{{ lesson.description }}</p>
             <v-btn
               color="deep-purple-lighten-2"
@@ -90,3 +90,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+.art{
+  font-style: bold;
+  text-transform: uppercase;
+  color: rgb(215, 117, 219);
+}
+</style>
