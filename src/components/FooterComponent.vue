@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid  class="bg-surface-variant icons" color="primary">
+  <v-container fluid fixed class="bg-surface-variant icons" color="primary">
     <v-row no-gutters>
       <v-col  lg="4" sm="12">
         <div class="title mb-5">ABOUT</div>
