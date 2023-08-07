@@ -2,13 +2,13 @@
   <div>
     <v-navigation-drawer
       v-model="drawer"
-      class="hide-sm-and-up bg-deep-purple text-center dec"
+      class="hide-lg-and-up bg-deep-purple text-center dec"
       justify="center"
       theme="dark"
       floating
     >
       <v-list
-        color="transparent text-decoration-none dec "
+        color="transparent text-decoration-none dec text-uppercase"
         density="compact"
         nav
         style="margin-top: 20px"
@@ -91,6 +91,7 @@ export default {
 }
 .dec {
   text-decoration: none !important;
+  text-transform: uppercase;
 }
 </style>
 <!-- color: rgb(52, 5, 84); -->

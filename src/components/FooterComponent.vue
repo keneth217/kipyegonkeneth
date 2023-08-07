@@ -1,8 +1,8 @@
 <template>
   <v-footer fluid fixed class="bg-surface-variant icons" color="primary">
     <v-container>
-      <v-row no-gutters>
-        <v-col-auto lg="4" sm="12">
+      <v-row >
+        <v-col lg="4" sm="12">
           <div class="title mb-5">ABOUT</div>
 
           <!-- <v-card class="text-center" width="100" height="100">
@@ -17,8 +17,8 @@
             Never give up,Believe in your self,Work smart,Its never too late
             !!!!!
           </h6>
-        </v-col-auto>
-        <v-col-auto lg="4" sm="12">
+        </v-col>
+        <v-col lg="4" sm="12">
           <div class="title mb-5">SOCIAL LINKS</div>
 
           <v-card-text>
@@ -36,9 +36,9 @@
             </v-btn>
           </router-link>
           </v-card-text>
-        </v-col-auto>
+        </v-col>
 
-        <v-col-auto lg="4" sm="12">
+        <v-col lg="4" sm="12">
           <div justify="center" class="title mb-5">CONTACTS</div>
 
           <div class="text-center" justify="center">
@@ -55,7 +55,7 @@
               Adress: 89,Nakuru-kenya
             </v-subheader>
           </div>
-        </v-col-auto>
+        </v-col>
       </v-row>
       <v-divider></v-divider>
       <v-row justify="center" class="text-center">
