@@ -1,11 +1,11 @@
 <template>
   <v-container fluid class="mt-0 hist">
     <v-row>
-      <v-col fluid lg="12" class="history">
+      <v-col-auto fluid lg="12" class="history">
         <div>
           <h6 class="center" justify="center">skills</h6>
         </div>
-      </v-col>
+      </v-col-auto>
 
       <v-col lg="3" v-for="(skill, i) in skills" :key="i">
         <v-card width="300">
@@ -21,13 +21,13 @@
                 <v-btn icon="$menu"></v-btn>
               </template>
 
-              <v-toolbar-title class="text-h6"
+              <v-toolbar-title class="text-h6 title"
                 >{{ skill.title }}
               </v-toolbar-title>
 
-              <template v-slot:append>
+              <!-- <template v-slot:append>
                 <v-btn icon="mdi-dots-vertical"></v-btn>
-              </template>
+              </template> -->
             </v-toolbar>
           </v-img>
 
@@ -121,5 +121,11 @@ export default {
 }
 .more{
   text-decoration: none;
+}
+.title{
+  color: #1839dd;
+  box-shadow: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
 }
 </style>

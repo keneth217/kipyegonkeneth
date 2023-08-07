@@ -1,6 +1,5 @@
 <template>
-  <v-container fluid class="background-image text-center bg justify-center d-flex">
-    
+  <v-container fluid class="background-image text-center hey bg justify-center d-flex">
   <v-card class="text-center justify-center mt-15" style="width: 400px">
     <v-toolbar color="deep-purple-accent-4" cards dark flat>
       <v-btn icon>
@@ -8,8 +7,6 @@
       </v-btn>
       <v-card-title class="text-h6 font-weight-regular">login</v-card-title>
       <v-spacer></v-spacer>
-    
-    
     </v-toolbar>
     <v-form ref="form" v-model="isValid" class="pa-4 pt-6">
       <v-text-field
@@ -74,8 +71,8 @@ export default {
   background-color: rgb(152, 152, 144);
 }
 .background-image {
-  
   background-position: center;
  
 }
+
 </style>

@@ -2,7 +2,7 @@
   <v-footer fluid fixed class="bg-surface-variant icons" color="primary">
     <v-container>
       <v-row no-gutters>
-        <v-col lg="4" sm="12">
+        <v-col-auto lg="4" sm="12">
           <div class="title mb-5">ABOUT</div>
 
           <!-- <v-card class="text-center" width="100" height="100">
@@ -17,11 +17,12 @@
             Never give up,Believe in your self,Work smart,Its never too late
             !!!!!
           </h6>
-        </v-col>
-        <v-col lg="4" sm="12">
+        </v-col-auto>
+        <v-col-auto lg="4" sm="12">
           <div class="title mb-5">SOCIAL LINKS</div>
 
           <v-card-text>
+            <router-link to="icon.route">
             <v-btn
               v-for="icon in icons"
               :key="icon"
@@ -30,13 +31,14 @@
               color="warning"
             >
               <v-icon size="24px">
-                {{ icon }}
+                {{ icon.social }}
               </v-icon>
             </v-btn>
+          </router-link>
           </v-card-text>
-        </v-col>
+        </v-col-auto>
 
-        <v-col lg="4" sm="12">
+        <v-col-auto lg="4" sm="12">
           <div justify="center" class="title mb-5">CONTACTS</div>
 
           <div class="text-center" justify="center">
@@ -53,7 +55,7 @@
               Adress: 89,Nakuru-kenya
             </v-subheader>
           </div>
-        </v-col>
+        </v-col-auto>
       </v-row>
       <v-divider></v-divider>
       <v-row justify="center" class="text-center">
@@ -70,7 +72,13 @@
 <script>
 export default {
   data: () => ({
-    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-github"],
+    // icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-github"],
+    icons:[
+      {social: "mdi-facebook", route: "https://github.com/keneth217"},
+      {social: "mdi-twitter", route: "https://github.com/keneth217"},
+      {social: "mdi-linkedin", route: "https://github.com/keneth217"},
+      {social: "mdi-github", route: "https://github.com/keneth217"},
+    ]
   }),
 };
 </script>

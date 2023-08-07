@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="text-center">
+  <v-container fluid class="text-center hey">
     <v-row>
       <v-col lg="3" sm="4" v-for="(lesson, index) in lessons" :key="index">
         <v-card
@@ -95,5 +95,8 @@ export default {
   font-style: bold;
   text-transform: uppercase;
   color: rgb(215, 117, 219);
+}
+.hey{
+  min-height: 80vh;
 }
 </style>

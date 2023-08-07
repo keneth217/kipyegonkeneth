@@ -45,7 +45,7 @@
 
 <style>
 .bg{
-  background-color: #b6eea3;
+  background-color: #969b95;
 }
 .background {
   background-image: url(./../assets/logo.svg);

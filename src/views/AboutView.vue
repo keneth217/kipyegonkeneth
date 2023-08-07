@@ -1,4 +1,5 @@
 <template>
+  <div>
  <v-container fluid class="mt-0 text-center about bg">
   <v-row>
     <v-col lg="12">
@@ -32,7 +33,7 @@
     </v-col>
   </v-row>
  </v-container>
-
+</div>
 </template>
 <style scoped>
 .bg{
