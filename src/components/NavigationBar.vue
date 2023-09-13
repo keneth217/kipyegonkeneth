@@ -2,7 +2,7 @@
   <div>
     <v-navigation-drawer
       v-model="drawer"
-      class="hide-lg-and-up bg-deep-purple text-center dec"
+      class="hide-lg-and-up bg-deep-purple dec"
       justify="center"
       theme="dark"
       floating

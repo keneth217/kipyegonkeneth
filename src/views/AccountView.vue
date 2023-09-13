@@ -1,78 +1,120 @@
 <template>
-  <v-container fluid class="background-image text-center hey bg justify-center d-flex">
-  <v-card class="text-center justify-center mt-15" style="width: 400px">
-    <v-toolbar color="deep-purple-accent-4" cards dark flat>
-      <v-btn icon>
-        <v-icon>mdi-arrow-left</v-icon>
-      </v-btn>
-      <v-card-title class="text-h6 font-weight-regular">login</v-card-title>
-      <v-spacer></v-spacer>
-    </v-toolbar>
-    <v-form ref="form" v-model="isValid" class="pa-4 pt-6">
-      <v-text-field
-        v-model="email"
-        :rules="[rules.email]"
-        variant="filled"
-        color="deep-purple"
-        label="Email address"
-        type="email"
-      ></v-text-field>
-      <v-text-field
-        v-model="password"
-        :rules="[rules.password, rules.length(6)]"
-        variant="filled"
-        color="deep-purple"
-        counter="6"
-        label="Password"
-        style="min-height: 96px"
-        type="password"
-      ></v-text-field>
-    </v-form>
-    <v-divider></v-divider>
-    <v-card-actions>
-      <v-btn variant="text" @click="form.reset()"> Clear </v-btn>
-      <v-spacer></v-spacer>
-      <v-btn
-        :disabled="!isValid"
-        :loading="isLoading"
-        color="deep-purple-accent-4"
-      >
-        Submit
-      </v-btn>
-    </v-card-actions>
-    <v-dialog v-model="dialog" max-width="400" persistent> </v-dialog>
-  </v-card>
-</v-container>
+  <v-container
+    fluid
+    class="background-image text-center hey bg justify-center d-flex"
+  >
+    <v-card class="text-center justify-center mt-15" style="width: 400px">
+      <v-toolbar color="deep-purple-accent-4" cards dark flat>
+        <v-btn icon>
+          <v-icon>mdi-arrow-left</v-icon>
+        </v-btn>
+        <v-card-title class="text-h6 font-weight-regular">login</v-card-title>
+        <v-spacer></v-spacer>
+      </v-toolbar>
+      <v-form @submit.prevent="submitForm" ref="form">
+        <v-text-field
+          id="email"
+          v-model="form.email"
+          :rules="[rules.email]"
+          variant="filled"
+          color="deep-purple"
+          label="Email address"
+          type="email"
+        ></v-text-field>
+        <v-text-field
+          id="password"
+          v-model="form.password"
+          :rules="[rules.password, rules.length(6)]"
+          variant="filled"
+          color="deep-purple"
+          counter="6"
+          label="Password"
+          style="min-height: 96px"
+          type="password"
+        ></v-text-field>
+      </v-form>
+      <v-divider></v-divider>
+      <v-card-actions>
+        <v-btn variant="text" @click="form.reset()">Clear</v-btn>
+        <v-spacer></v-spacer>
+        <v-btn :disabled="!isValid" :loading="isLoading" color="deep-purple-accent-4" @click="submitForm">Submit</v-btn>
+      </v-card-actions>
+      <v-dialog v-model="dialog" max-width="400" persistent> </v-dialog>
+    </v-card>
+  </v-container>
 </template>
-<script>
-export default {
-  data: () => ({
-    email: undefined,
-    isValid: false,
-    isLoading: false,
-    password: undefined,
 
-    rules: {
-      email: (v) => !!(v || "").match(/@/) || "Please enter a valid email",
-      length: (len) => (v) =>
-        (v || "").length >= len || `Invalid character length, required ${len}`,
-      password: (v) =>
-        !!(v || "").match(
-          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/
-        ) ||
-        "Password must contain an upper case letter, a numeric character, and a special character",
-      required: (v) => !!v || "This field is required",
+<script>
+import axios from 'axios';
+import Swal from 'sweetalert2';
+
+export default {
+  data() {
+    return {
+      form: {
+        email: '',
+        password: ''
+      },
+      isValid: false,
+      isLoading: false,
+      dialog: false,
+      rules: {
+        email: (v) => !!(v || "").match(/@/) || "Please enter a valid email",
+        length: (len) => (v) =>
+          (v || "").length >= len || `Invalid character length, required ${len}`,
+        password: (v) =>
+          !!(v || "").match(
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/
+          ) ||
+          "Password must contain an upper case letter, a numeric character, and a special character",
+        required: (v) => !!v || "This field is required",
+      }
+    };
+  },
+  methods: {
+    callAlert(type, message) {
+      Swal.fire({
+        icon: type,
+        title: type,
+        text: message,
+        showConfirmButton: false,
+        timer: 2000
+      });
     },
-  }),
+    submitForm() {
+      this.$store.dispatch("removeToken");
+      const formData = {
+        username: this.form.email,
+        password: this.form.password
+      };
+      axios.post('auth/authentication', formData)
+        .then(response => {
+          // Handle success response
+          console.log(response.data);
+          let token = response.data.token;
+          this.$store.commit("setToken", token);
+          this.$router.push({ name: "home" });
+          this.callAlert("success", "Logged in successfully");
+          // Reset the form
+          this.form = {
+            email: '',
+            password: ''
+          };
+        })
+        .catch(error => {
+          console.error("error: ", error);
+          this.callAlert("error", "Wrong username/password");
+        });
+    }
+  }
 };
 </script>
+
 <style>
-.bg{
+.bg {
   background-color: rgb(152, 152, 144);
 }
 .background-image {
   background-position: center;
- 
 }
-
 </style>

@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "axios": "^1.5.0",
     "core-js": "^3.8.3",
     "roboto-fontface": "*",
+    "sweetalert2": "^11.7.27",
     "vee-validate": "^4.11.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
