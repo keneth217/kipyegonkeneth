@@ -1,8 +1,8 @@
 import axios from "axios";
-import store from "./store";
+import store from "./store/index.js";
 
-axios.defaults.baseURL = 'https://api1.samis.co.ke/api/v1/';
-// axios.defaults.baseURL = 'http://localhost:9091/api/v1/';
+// axios.defaults.baseURL = 'https://api1.samis.co.ke/api/v1/';
+axios.defaults.baseURL = 'http://localhost:8080/api/v1/auth/';
 // axios.defaults.baseURL = "https://vemapi.leonteqsecurity.com/";
 
 axios.interceptors.request.use(async (config) => {

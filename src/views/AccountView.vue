@@ -87,7 +87,7 @@ export default {
         username: this.form.email,
         password: this.form.password
       };
-      axios.post('auth/authentication', formData)
+      axios.post('authentication', formData)
         .then(response => {
           // Handle success response
           console.log(response.data);
