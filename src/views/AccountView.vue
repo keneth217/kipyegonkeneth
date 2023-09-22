@@ -15,8 +15,7 @@
         <v-text-field
           id="email"
           v-model="form.email"
-          :rules="[rules.email]"
-          variant="filled"
+          
           color="deep-purple"
           label="Email address"
           type="email"
@@ -24,10 +23,9 @@
         <v-text-field
           id="password"
           v-model="form.password"
-          :rules="[rules.password, rules.length(6)]"
-          variant="filled"
+          
           color="deep-purple"
-          counter="6"
+         
           label="Password"
           style="min-height: 96px"
           type="password"
@@ -37,9 +35,9 @@
       <v-card-actions>
         <v-btn variant="text" @click="form.reset()">Clear</v-btn>
         <v-spacer></v-spacer>
-        <v-btn :disabled="!isValid" :loading="isLoading" color="deep-purple-accent-4" @click="submitForm">Submit</v-btn>
+        <v-btn  color="deep-purple-accent-4" @click="submitForm">Submit</v-btn>
       </v-card-actions>
-      <v-dialog v-model="dialog" max-width="400" persistent> </v-dialog>
+     
     </v-card>
   </v-container>
 </template>
@@ -52,23 +50,12 @@ export default {
   data() {
     return {
       form: {
-        email: '',
-        password: ''
+        email: 'kipyegonkeneth03@gmail.com',
+        password: 'designer@3689'
       },
       isValid: false,
       isLoading: false,
       dialog: false,
-      rules: {
-        email: (v) => !!(v || "").match(/@/) || "Please enter a valid email",
-        length: (len) => (v) =>
-          (v || "").length >= len || `Invalid character length, required ${len}`,
-        password: (v) =>
-          !!(v || "").match(
-            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/
-          ) ||
-          "Password must contain an upper case letter, a numeric character, and a special character",
-        required: (v) => !!v || "This field is required",
-      }
     };
   },
   methods: {

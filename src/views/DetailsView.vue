@@ -49,13 +49,20 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col justify="center" class="text-center" lg="12"> 
+      <v-col justify="center" class="text-center mx-2" lg="12"> 
        <v-btn color="primary" >
         <router-link class="more" to="/history">know more</router-link>
         <v-tooltip
         activator="parent"
         location="end"
       >EDUCATION & EXPERIENCE</v-tooltip>
+      </v-btn>
+      <v-btn  class="mx-2 me-2" color="primary" >
+        <router-link class="more " to="/projects">my github projects</router-link>
+        <v-tooltip
+        activator="parent"
+        location="end"
+      >MY GITHUB PROJECTS AND LINKS</v-tooltip>
       </v-btn>
       </v-col>
     </v-row>

@@ -1,60 +1,61 @@
 <template>
   <v-container
     fluid
-    class="background-image text-center hey bg justify-center d-flex"
+    class="background-image text-center hey bg text-align-center justify-center"
   >
     <v-row>
       <v-col>
-        <h2>about us</h2>
+        <h2 class="title">about us</h2>
         <p>
-          Kenwaves Solutions is a forward-thinking information technology
-          startup dedicated to revolutionizing the way businesses harness
-          technology for success. With a focus on innovation and customer
-          satisfaction, we offer a range of IT services and solutions designed
-          to empower organizations to thrive in the digital age. Our team of
-          experienced IT professionals is passionate about solving complex
-          technology challenges. We specialize in services such as IT
-          infrastructure management, cybersecurity solutions, cloud computing
-          optimization, software development, and IT consulting. Our approach is
-          to understand the unique needs and goals of each client, providing
-          tailored solutions that enhance efficiency, security, and
-          productivity. Kenwaves Solutions prides itself on staying ahead of the
-          curve when it comes to emerging technologies. We believe that
-          technology should be an enabler, not a barrier, and we work closely
-          with our clients to integrate cutting-edge solutions into their
-          operations. Our commitment is not only to address immediate IT needs
-          but also to create scalable, future-ready strategies that ensure
-          long-term success. In a rapidly changing digital landscape, Kenwaves
-          Solutions stands out as a trusted partner for businesses seeking
-          innovative IT solutions. We are driven by a passion for excellence and
+          Kenwaves solutions is a dynamic and innovative information technology
+          startup dedicated to simplifying and optimizing your digital world. We
+          specialize in providing cutting-edge IT solutions and services
+          tailored to meet the unique needs of businesses of all sizes. Our team
+          of highly skilled experts is committed to delivering top-notch IT
+          services, including network infrastructure setup, cybersecurity
+          solutions, cloud computing implementation, software development, and
+          IT consulting. We understand that technology is the backbone of modern
+          businesses, and our mission is to empower organizations by harnessing
+          the full potential of technology to drive growth and efficiency. At
+          Kenwaves solutions, we believe in a customer-centric approach. We work
+          closely with our clients to identify their IT challenges and develop
+          customized strategies that align with their goals and budget. Our
+          solutions are not only designed to resolve immediate issues but also
+          to future-proof your IT infrastructure, ensuring scalability and
+          security as your business grows. In a rapidly evolving digital
+          landscape,Kenwaves solutions is your trusted partner for all things
+          IT. Our dedication to innovation, reliability, and excellence sets us
+          apart, making us the go-to IT company for businesses seeking a
+          competitive edge in today's technology-driven world. Kenwaves
+          Solutions is a dedicated to revolutionizing the way businesses harness
+          technology for success. Our mission is to provide you with a seamless
+          solutions experience, ensuring you find exactly what you are looking
+          for.Choose Kenwaves solutions for IT expertise that transforms your
+          challenges into opportunities and drives your business toward a
+          brighter, more efficient We are driven by a passion for excellence and
           a dedication to helping organizations thrive in the digital era. When
           you choose Kenwaves Solutions, you're choosing a partner that will
           guide you toward technological empowerment and success.
         </p>
-        <h2>motto</h2>
+        <h2 class="title">motto</h2>
         <p>Navigating Technology, Enabling Success</p>
-        <h2>vission</h2>
+        <h2 class="title">vission</h2>
         <p>
           To be the leading catalyst of technological transformation, empowering
           businesses to thrive in an ever-evolving digital world.
         </p>
-        <h2>core values</h2>
-        <div>
-          <v-list lines="one">
-            <v-list-item
-              v-for="item in items"
-              :key="item.title"
-              :title="item.title"
-              :subtitle="item.desc"
-            ></v-list-item>
-          </v-list>
+        <h3  class="title mb-12">our core values</h3>
+        <div class="mb-2" v-for="(item, index) in items" :key="index">
+          
+          <h3 class="core">{{index + 1}}.{{item.title}}</h3>
+          <p >{{item.desc}}</p>
+        
         </div>
         <div>
-          <p>
-            Choose  Kenwaves Solutions for IT expertise that transforms your
+          <p class="mt-12">
+            Choose Kenwaves Solutions for IT expertise that transforms your
             challenges into opportunities and drives your business toward a
-            brighter, more efficient future.
-             Kenwaves Solutions: Your Partner
+            brighter, more efficient future. Kenwaves Solutions: Your Partner
             for Technological Empowerment and Success.
           </p>
         </div>
@@ -97,10 +98,11 @@ export default {
 </script>
 
 <style>
+
 .bg {
   background-color: rgb(152, 152, 144);
 }
-.background-image {
-  background-position: center;
+.core {
+  text-transform: uppercase;
 }
 </style>

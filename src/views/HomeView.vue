@@ -4,7 +4,7 @@
       <v-col lg="6" sm="12">
         <h2 class="intro text-center">Bonjour</h2>
         <p class="description">
-          TechSolutions Pro is a dynamic and innovative information technology
+         Kenwaves solutions is a  dynamic and innovative information technology
           startup dedicated to simplifying and optimizing your digital world. We
           specialize in providing cutting-edge IT solutions and services
           tailored to meet the unique needs of businesses of all sizes. Our team
@@ -13,30 +13,7 @@
           solutions, cloud computing implementation, software development, and
           IT consulting. We understand that technology is the backbone of modern
           businesses, and our mission is to empower organizations by harnessing
-          the full potential of technology to drive growth and efficiency. At
-          TechSolutions Pro, we believe in a customer-centric approach. We work
-          closely with our clients to identify their IT challenges and develop
-          customized strategies that align with their goals and budget. Our
-          solutions are not only designed to resolve immediate issues but also
-          to future-proof your IT infrastructure, ensuring scalability and
-          security as your business grows. In a rapidly evolving digital
-          landscape, TechSolutions Pro is your trusted partner for all things
-          IT. Our dedication to innovation, reliability, and excellence sets us
-          apart, making us the go-to IT company for businesses seeking a
-          competitive edge in today's technology-driven world. Kenwaves
-          Solutions is a forward-thinking information technology startup
-          dedicated to revolutionizing the way businesses harness technology for
-          success. With a focus on innovation and customer satisfaction, we
-          offer a range of IT services and solutions designed to empower
-          organizations to thrive in the digital age. Our mission is to provide
-          you with a seamless solutions experience, ensuring you find exactly
-          what you are looking for. We take great pride in delivering top-notch
-          technological services, and our knowledgeable team is always ready to
-          assist you with any inquiries or concerns you may have.Your
-          satisfaction is our top priority, and we strive to exceed your
-          expectations with every interaction. Choose TechSolutions Pro for IT
-          expertise that transforms your challenges into opportunities and
-          drives your business toward a brighter, more efficient future.
+          the full potential of technology to drive growth and efficiency. 
         </p>
         <!-- <h4 class="intro mb-3">Happy shopping!</h4>
         <v-btn class="white-text my-5 mx-2" color="success" rounded
