@@ -50,8 +50,8 @@ export default {
   data() {
     return {
       form: {
-        email: 'kipyegonkeneth03@gmail.com',
-        password: 'designer@3689'
+        email: '',
+        password: ''
       },
       isValid: false,
       isLoading: false,
@@ -80,7 +80,7 @@ export default {
           console.log(response.data);
           let token = response.data.token;
           this.$store.commit("setToken", token);
-          this.$router.push({ name: "home" });
+          this.$router.push({ name: "dashboard" });
           this.callAlert("success", "Logged in successfully");
           // Reset the form
           this.form = {

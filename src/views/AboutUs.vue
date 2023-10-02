@@ -1,12 +1,12 @@
 <template>
   <v-container
     fluid
-    class="background-image text-center hey bg text-align-center justify-center"
+    class="background text-center hey bg text-align-center justify-center"
   >
     <v-row>
       <v-col>
-        <h2 class="title">about us</h2>
-        <p>
+        <h2 class="title ">about us</h2>
+        <p class="story">
           Kenwaves solutions is a dynamic and innovative information technology
           startup dedicated to simplifying and optimizing your digital world. We
           specialize in providing cutting-edge IT solutions and services
@@ -37,22 +37,22 @@
           you choose Kenwaves Solutions, you're choosing a partner that will
           guide you toward technological empowerment and success.
         </p>
-        <h2 class="title">motto</h2>
-        <p>Navigating Technology, Enabling Success</p>
+        <h2 class="title ">motto</h2>
+        <p class="story">Navigating Technology, Enabling Success</p>
         <h2 class="title">vission</h2>
-        <p>
+        <p class="story">
           To be the leading catalyst of technological transformation, empowering
           businesses to thrive in an ever-evolving digital world.
         </p>
         <h3  class="title mb-12">our core values</h3>
         <div class="mb-2" v-for="(item, index) in items" :key="index">
           
-          <h3 class="core">{{index + 1}}.{{item.title}}</h3>
-          <p >{{item.desc}}</p>
+          <h3 class="core story">{{index + 1}}.{{item.title}}</h3>
+          <p class="story" >{{item.desc}}</p>
         
         </div>
         <div>
-          <p class="mt-12">
+          <p class="mt-12 story">
             Choose Kenwaves Solutions for IT expertise that transforms your
             challenges into opportunities and drives your business toward a
             brighter, more efficient future. Kenwaves Solutions: Your Partner
@@ -98,11 +98,26 @@ export default {
 </script>
 
 <style>
+.background {
+  background-image: url(./../assets/contact.svg);
+  width: 100%;
+  height: 800px;
+  display: block;
+
+  background-size: cover;
+  top: 0;
+}
 
 .bg {
   background-color: rgb(152, 152, 144);
 }
 .core {
   text-transform: uppercase;
+}
+.story{
+  text-align: center;
+  color: #121212;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
 }
 </style>

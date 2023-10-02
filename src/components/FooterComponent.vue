@@ -90,8 +90,7 @@ h4.bottom {
 }
 .title {
   color: hsl(270, 8%, 95%);
-  text-shadow: 5px 2px 5px black;
-
+  text-shadow: 5px 2px  5px  rgb(22, 21, 21) ;
   font-size: 20px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "cursive",
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",

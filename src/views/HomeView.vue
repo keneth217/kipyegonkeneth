@@ -59,7 +59,7 @@
 </template>
 <script></script>
 
-<style>
+<style scoped>
 .bg {
   background-color: #969b95;
 }
@@ -73,7 +73,7 @@
   top: 0;
 }
 h2.intro {
-  font-size: 60px;
+  font-size: 40px;
   font: bold;
   font-family: cursive;
   color: #f60de7;
@@ -90,7 +90,7 @@ p.description {
   font-family: cursive;
   color: #f5f1f1ef;
 }
-/* Define the initial position of the image */
+
 .move-all-directions {
   position: relative;
   animation: moveAnimation 20s infinite;
