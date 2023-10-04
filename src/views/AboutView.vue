@@ -7,10 +7,6 @@
         <h6 class="title justify-center">My Story</h6>
       </div>
     </v-col>
-  </v-row>
- </v-container>
- <v-container fluid class="mt-10 text-center">
-  <v-row>
     <v-col lg="12">
       <div class="text-center ">
         <h5 class="justify-center story">
