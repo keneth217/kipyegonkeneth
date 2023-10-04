@@ -8,7 +8,7 @@
             >Get In Touch</h6
           >
         </div>
-      </v-col-auto>
+      <!-- </v-col-auto>
       <v-col lg="6" sm="12" class="text-end text-center hidden-sm-and-down">
         <v-img
           class="text-end "
@@ -19,7 +19,7 @@
           alt="hero-image"
         >
         </v-img>
-      </v-col>
+      </v-col> -->
       <!-- <v-col class="mt-2 mr-14 text-lg-center hidden-sm-only" >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255344.49358054332!2d35.93877355687771!3d-0.31581090607204726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18298d90cf610bef%3A0xf2f21833bc7cc21a!2sNakuru!5e0!3m2!1sen!2ske!4v1689952680295!5m2!1sen!2ske"
