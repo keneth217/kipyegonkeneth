@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hey">
  <v-container fluid class="mt-0 text-center about bg">
   <v-row>
     <v-col lg="12">
@@ -36,6 +36,10 @@
 </div>
 </template>
 <style scoped>
+.hey{
+  height: 100%;
+  width: 100%;
+}
 .bg{
   background-color: rgb(152, 152, 144);
 }

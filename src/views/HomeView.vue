@@ -1,8 +1,11 @@
 <template>
-  <v-container color="background" fluid class="background bg">
+  <v-container color="background" fluid class=" hey background">
     <v-row class="">
       <v-col lg="6" sm="12">
-        <h2 class="intro text-center">Bonjour</h2>
+        <div class="glass">
+          <h2 class="intro text-center">Bonjour</h2>
+                  </div>
+        
         <p class="description">
          Kenwaves solutions is a  dynamic and innovative information technology
           startup dedicated to simplifying and optimizing your digital world. We
@@ -55,9 +58,15 @@
         </v-img>
       </v-col>
     </v-row>
+    <v-col>
+
+
+
+    </v-col>
+   
   </v-container>
 </template>
-<script></script>
+
 
 <style scoped>
 .bg {
@@ -83,6 +92,42 @@ h4.intro {
   font: bold;
   font-family: cursive;
   color: #41e40a;
+}
+.glass{
+  height:100px;
+  width:300px;
+  background-color: rgba(255, 255, 255, 0.2); /* Glass background color with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the glass effect */
+  backdrop-filter: blur(10px); 
+}
+.glass::before,
+.glass::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.4); /* Circle background color with opacity */
+    border-radius: 50%; /* Create a circle shape */
+}
+
+.glass::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.glass::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2{
+    margin: 0;
+    text-align: center;
+    color: #333;
 }
 p.description {
   font-size: 20px;
