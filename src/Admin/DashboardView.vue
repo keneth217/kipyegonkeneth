@@ -34,8 +34,6 @@
             class="dec"
           ></v-list-item>
         </router-link>
-      
-           
       </v-list>
     </v-navigation-drawer>
 
@@ -43,28 +41,70 @@
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-app-bar-title>Application</v-app-bar-title>
+      <v-button
+        class="white-text text-center mx-2 text-decoration-none"
+        color="indigo"
+        rounded
+      >
+        <!-- Logout button -->
+        <button @click="logout">Logout</button>
+      </v-button>
     </v-app-bar>
 
     <v-main> <!--  -->hello </v-main>
   </v-app>
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue";
+import { useRouter } from "vue-router"; // Import useRouter for navigation
 
-const drawer = ref(null);
-const menus = [
-  { title: "Dashboard", route: "/", icon: "mdi-account-box" },
-  { title: "Articles", route: "/about", icon: "mdi-checkerboard" },
-  {
-    title: "Articles",
-    route: "/articles",
-    icon: "mdi-checkbox-multiple-blank-circle",
+export default {
+  setup() {
+    const drawer = ref(null);
+    const router = useRouter(); // Get the router instance
+
+    // Define the logout method
+    const logout = () => {
+       // Log before removing the token
+  console.log('Before removing token:', localStorage.getItem('token'));
+      // Clear the token from localStorage
+      localStorage.removeItem("token");
+       // Log after removing the token
+  console.log('After removing token:', localStorage.getItem('token'));
+
+      // Redirect the user to the login page
+      router.push('accounts');
+    };
+    const menus = [
+      { title: "Dashboard", route: "/", icon: "mdi-account-box" },
+      { title: "Articles", route: "/about", icon: "mdi-checkerboard" },
+      {
+        title: "Articles",
+        route: "/articles",
+        icon: "mdi-checkbox-multiple-blank-circle",
+      },
+      { title: "Account", route: "/accounts", icon: "mdi-account-multiple" },
+      {
+        title: "Contacts",
+        route: "/contacts",
+        icon: "mdi-format-list-bulleted",
+      },
+    ];
+
+    return {
+      drawer,
+      logout,
+      menus, // Make the logout method available to the template
+    };
   },
-  { title: "Account", route: "/accounts", icon: "mdi-account-multiple" },
-  { title: "Contacts", route: "/contacts", icon: "mdi-format-list-bulleted" },
-];
+};
 </script>
+
+<style>
+/* Your CSS styles here */
+</style>
+
 <style>
 .title {
   color: #a31181;
