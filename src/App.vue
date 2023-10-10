@@ -2,12 +2,13 @@
   <v-app>
     <v-main>
       <NavigationBar />
-      <v-content transition="slide-x-transition">
-        <router-view></router-view>
-      </v-content>
-      <FooterComponent/>
-     
-      <!-- <FooterView/> -->
+      <router-view></router-view>
+      <v-content transition="slide-x-transition"> 
+       <router-view></router-view> 
+     </v-content> 
+    <FooterComponent/>
+    
+    
 
     </v-main>
   </v-app>
@@ -20,7 +21,8 @@ import FooterComponent from "@/components/FooterComponent.vue"
 export default {
   name: "App",
   components: {
-    NavigationBar,FooterComponent,
+    NavigationBar,
+    FooterComponent,
   },
 };
 </script>
