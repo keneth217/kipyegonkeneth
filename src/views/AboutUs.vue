@@ -98,25 +98,28 @@ export default {
 </script>
 
 <style>
-.background {
-  background-image: url(./../assets/contact.svg);
+.background{
+  background-size: cover; 
+  background-image: url(./../assets/strait.svg);
   width: 100%;
-  height: 800px;
+  height: 100%;
   display: block;
-
   background-size: cover;
   top: 0;
 }
-
-.bg {
-  background-color: rgb(152, 152, 144);
+.title {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #a31181;
+  box-shadow: 5px ;
+  font-family: "Times New Roman", Times, serif;
 }
 .core {
   text-transform: uppercase;
 }
 .story{
   text-align: center;
-  color: #121212;
+  color: hsl(0, 22%, 95%);
   font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
 }
