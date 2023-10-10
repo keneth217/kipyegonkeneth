@@ -13,8 +13,12 @@
             >Get In Touch</h6
           >
         </div>
+<<<<<<< HEAD
       </v-col> -->
       <!-- </v-col-auto>
+=======
+      </v-col-auto>
+>>>>>>> 1b0823d3720c94cc4305036c5b578ffac0a8da17
       <v-col lg="6" sm="12" class="text-end text-center hidden-sm-and-down">
         <v-img
           class="text-end "
