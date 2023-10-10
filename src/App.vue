@@ -2,13 +2,17 @@
   <v-app>
     <v-main>
       <NavigationBar />
-      <v-content transition="slide-x-transition">
-        <router-view></router-view>
-      </v-content>
+     // <v-content transition="slide-x-transition">
+     
+    //  </v-content>
       <FooterComponent/>
      
-      <!-- <FooterView/> -->
-
+   <router-view v-slot="{component}">
+     <transition name="route" mode="out-in">
+       <component :is="component"></component>
+   </transition>
+   
+   </router-view>
     </v-main>
   </v-app>
 </template>
@@ -24,3 +28,19 @@ export default {
   },
 };
 </script>
+<style>
+  .router-enter-from{
+    opacity:0;
+    transform:translateX(100px);
+  }
+    .router-enter-active{
+   transition:all 0.3s ease-out;
+  }
+    .router-enter-to{
+    opacity:0;
+    transform:translateX(-100px);
+  }
+    .router-leave-active{
+   transition:all 0.3s ease-in;
+  }
+  </style>
