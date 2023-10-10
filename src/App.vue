@@ -2,28 +2,13 @@
   <v-app>
     <v-main>
       <NavigationBar />
-<<<<<<< HEAD
-   //   <router-view></router-view>
-   <!-- //   <v-content transition="slide-x-transition">  -->
-  <!-- //     <router-view></router-view>  -->
- <!-- //    </v-content>  -->
-//    <FooterComponent/>
-    
-    
-
-=======
-     // <v-content transition="slide-x-transition">
-     
-    //  </v-content>
       <FooterComponent/>
      
    <router-view v-slot="{component}">
-     <transition name="route" mode="out-in">
+     <transition name="router" mode="out-in">
        <component :is="component"></component>
    </transition>
-   
    </router-view>
->>>>>>> 1b0823d3720c94cc4305036c5b578ffac0a8da17
     </v-main>
   </v-app>
 </template>
