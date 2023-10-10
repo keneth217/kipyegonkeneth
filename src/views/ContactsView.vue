@@ -8,7 +8,7 @@
             >Get In Touch</h6
           >
         </div>
-      <!-- </v-col-auto>
+      </v-col-auto>
       <v-col lg="6" sm="12" class="text-end text-center hidden-sm-and-down">
         <v-img
           class="text-end "
