@@ -1,5 +1,10 @@
 <template>
-  <v-container fluid class="text-center hey">
+  <v-container fluid class="text-center background">
+    <v-row>
+      <v-col class="title">
+        <h6>our courses</h6>
+      </v-col>
+    </v-row>
     <v-row>
       <v-col lg="3" sm="4" v-for="(lesson, index) in lessons" :key="index">
         <v-card
@@ -25,7 +30,9 @@
           </v-img>
           <v-divider></v-divider>
           <div class="text-start mb-0 text-sm">
-            <strong> <p class="text-center art">{{ lesson.title }}</p> </strong>
+            <strong>
+              <p class="text-center art">{{ lesson.title }}</p>
+            </strong>
             <p>{{ lesson.description }}</p>
             <v-btn
               color="deep-purple-lighten-2"
@@ -91,12 +98,25 @@ export default {
 };
 </script>
 <style scoped>
-.art{
+.title {
+  font-family: 'Times New Roman', Times, serif;
   font-style: bold;
+  color: red;
+  font-size: 40px;
+  text-decoration: wavy;
+}
+.art {
+  font-style: bold;
+  font-size: 30px;
   text-transform: uppercase;
   color: rgb(215, 117, 219);
 }
-.hey{
-  min-height: 80vh;
+.background {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  top: 0;
+  background-image: url(./../assets/strait.svg);
 }
 </style>
