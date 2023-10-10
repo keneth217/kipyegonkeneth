@@ -89,6 +89,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../Admin/DashboardView.vue')
   },
+  {
+  path: '/test',
+  name: 'TestView',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "about" */ './../views/TestView.vue')
+},
   { path: '/:catchAll(.*)', component: () => import('../views/NoMatchView.vue') } // Catch-all route for 404
 ]
 
