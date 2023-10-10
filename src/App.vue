@@ -4,9 +4,9 @@
       <NavigationBar />
 <<<<<<< HEAD
    //   <router-view></router-view>
-   //   <v-content transition="slide-x-transition"> 
-  //     <router-view></router-view> 
- //    </v-content> 
+   <!-- //   <v-content transition="slide-x-transition">  -->
+  <!-- //     <router-view></router-view>  -->
+ <!-- //    </v-content>  -->
 //    <FooterComponent/>
     
     
