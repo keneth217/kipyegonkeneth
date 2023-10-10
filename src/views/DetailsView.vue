@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="mt-0 hist">
+  <v-container fluid class="mt-0 background hist">
     <v-row>
       <v-col-auto fluid lg="12" class="history">
         <div>
@@ -108,8 +108,24 @@ export default {
 };
 </script>
 <style scoped>
+.background{
+  background-size: cover; 
+  background-image: url(./../assets/strait.svg);
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  top: 0;
+}
+.title {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #a31181;
+  box-shadow: 5px ;
+  font-family: "Times New Roman", Times, serif;
+}
 .history {
-  background-image: url(./../assets/contact.svg);
+
   width: 100%;
   height: 200px;
   display: block;
