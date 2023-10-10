@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="bg">
+  <v-container fluid class="background">
     <v-row>
       <v-col class="text-center" justify="center">
         <v-carousel
@@ -54,6 +54,22 @@ export default {
 };
 </script>
 <style scoped>
+.background{
+  background-size: cover; 
+  background-image: url(./../assets/strait.svg);
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  top: 0;
+}
+.title {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #a31181;
+  box-shadow: 5px ;
+  font-family: "Times New Roman", Times, serif;
+}
 .bg {
   background-color: rgb(120, 93, 179);
   height: 100%;
