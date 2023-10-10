@@ -1,13 +1,19 @@
 <template>
-  <v-container fluid class="text-center bg " jusify="center">
-    <v-row justify="center">
+  <v-container fluid class="text-center background " jusify="center">
+    <v-row>
+      <v-col class="title">
+        <h6> Get In Touch</h6>
+      </v-col>
+    </v-row>
+  <v-row justify="center">
     
-      <v-col-auto lg="12 " sm="12" class="text-center  back ">
+      <!--   <v-col lg="12 " sm="12" class="text-center  back ">
         <div class="text-center ">
           <h6 class="text-h4  mb-2 text-center title justify-center "
             >Get In Touch</h6
           >
         </div>
+      </v-col> -->
       <!-- </v-col-auto>
       <v-col lg="6" sm="12" class="text-end text-center hidden-sm-and-down">
         <v-img
@@ -31,11 +37,9 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </v-col> -->
-      <v-col lg="6" sm="12" class="mt-5 text-center " >
+      <v-col lg="6" sm="12" class="mt-5 text-center  account" >
         <v-card>
-          <v-card-title class="title text-center text-decoration-underline"
-            >fill the form below</v-card-title
-          >
+        
           <form @submit.prevent="submit" class=" mx-2">
             <v-text-field
               v-model="name.value.value"
@@ -110,23 +114,26 @@ const submit = handleSubmit((values) => {
 });
 </script>
 <style scoped>
-.bg{
-  background-color: rgb(152, 152, 144);
-}
-.back{
-  background-image: url(./../assets/straight.svg);
+.background {
   width: 100%;
-  height: 200px;
+  height: 800px;
   display: block;
   background-size: cover;
-  top: 0px;
-  bottom: 50px;
+  top: 0;
+  background-image: url(./../assets/strait.svg);
+
 }
 .title{
-  font-size: 30px;
+  font-size: 40px;
   text-transform: capitalize;
   color: #9c2c77;
   text-shadow: 5px 2px 5px rgb(3, 3, 3);
   font-family: 'Times New Roman', Times, serif;
+}
+.account {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>
