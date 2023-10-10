@@ -3,11 +3,11 @@
     <v-main>
       <NavigationBar />
 <<<<<<< HEAD
-      <router-view></router-view>
-      <v-content transition="slide-x-transition"> 
-       <router-view></router-view> 
-     </v-content> 
-    <FooterComponent/>
+   //   <router-view></router-view>
+   //   <v-content transition="slide-x-transition"> 
+  //     <router-view></router-view> 
+ //    </v-content> 
+//    <FooterComponent/>
     
     
 
