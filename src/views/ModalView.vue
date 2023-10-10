@@ -3,7 +3,7 @@
       <!-- Modal content here -->
       <div class="modal-content">
         <!-- Your modal content goes here -->
-        <p>This is your modal content.</p>
+        <p> welcome to KNW SOLUTIONS.</p>
       </div>
     </div>
   </template>
