@@ -6,41 +6,6 @@
       </v-col>
     </v-row>
   <v-row justify="center">
-    
-      <!--   <v-col lg="12 " sm="12" class="text-center  back ">
-        <div class="text-center ">
-          <h6 class="text-h4  mb-2 text-center title justify-center "
-            >Get In Touch</h6
-          >
-        </div>
-<<<<<<< HEAD
-      </v-col> -->
-      <!-- </v-col-auto>
-=======
-     // </v-col-auto>
->>>>>>> 1b0823d3720c94cc4305036c5b578ffac0a8da17
-      <v-col lg="6" sm="12" class="text-end text-center hidden-sm-and-down">
-        <v-img
-          class="text-end "
-          width="500"
-          height="500"
-          cover
-          src="./../assets/protection.png"
-          alt="hero-image"
-        >
-        </v-img>
-      </v-col> -->
-      <!-- <v-col class="mt-2 mr-14 text-lg-center hidden-sm-only" >
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255344.49358054332!2d35.93877355687771!3d-0.31581090607204726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18298d90cf610bef%3A0xf2f21833bc7cc21a!2sNakuru!5e0!3m2!1sen!2ske!4v1689952680295!5m2!1sen!2ske"
-          width="100%"
-          height="100%"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </v-col> -->
       <v-col lg="6" sm="12" class="mt-5 text-center  account" >
         <v-card>
         
