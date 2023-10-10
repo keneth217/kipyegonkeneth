@@ -1,13 +1,14 @@
 <template>
-  <v-container color="background" fluid class=" hey background">
+  <v-container color="background" fluid class="hey background">
     <v-row class="">
+       <Modal />
       <v-col lg="6" sm="12">
         <div class="glass">
           <h2 class="intro text-center">Bonjour</h2>
-                  </div>
-        
+        </div>
+
         <p class="description">
-         Kenwaves solutions is a  dynamic and innovative information technology
+          Kenwaves solutions is a dynamic and innovative information technology
           startup dedicated to simplifying and optimizing your digital world. We
           specialize in providing cutting-edge IT solutions and services
           tailored to meet the unique needs of businesses of all sizes. Our team
@@ -16,7 +17,7 @@
           solutions, cloud computing implementation, software development, and
           IT consulting. We understand that technology is the backbone of modern
           businesses, and our mission is to empower organizations by harnessing
-          the full potential of technology to drive growth and efficiency. 
+          the full potential of technology to drive growth and efficiency.
         </p>
         <!-- <h4 class="intro mb-3">Happy shopping!</h4>
         <v-btn class="white-text my-5 mx-2" color="success" rounded
@@ -46,9 +47,9 @@
           </router-link>
         </v-btn>
       </v-col>
-      <v-col lg="6" sm="12" class="text-end text-center hidden-sm-and-down">
+      <v-col lg="6" sm="12" class="text-center   hidden-sm-and-down">
         <v-img
-          class="text-end move-all-directions"
+          class=" image  move-all-directions"
           width="500"
           height="500"
           cover
@@ -58,26 +59,30 @@
         </v-img>
       </v-col>
     </v-row>
-    <v-col>
-
-
-
-    </v-col>
-   
+    <v-col> </v-col>
   </v-container>
 </template>
+<script>
+import Modal from "@/views/ModalView.vue"; // Adjust the path as needed
 
+export default {
+  components: {
+    Modal,
+  },
+};
+</script>
 
 <style scoped>
-.bg {
-  background-color: #969b95;
+.image{
+  top: 50%;
+  left: 50%;
 }
+
 .background {
   background-image: url(./../assets/logo.svg);
   width: 100%;
   height: 800px;
   display: block;
-
   background-size: cover;
   top: 0;
 }
@@ -93,41 +98,51 @@ h4.intro {
   font-family: cursive;
   color: #41e40a;
 }
-.glass{
-  height:100px;
-  width:300px;
-  background-color: rgba(255, 255, 255, 0.2); /* Glass background color with opacity */
+.glass {
+  height: 100px;
+  width: 300px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Glass background color with opacity */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the glass effect */
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
 }
 .glass::before,
 .glass::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.4); /* Circle background color with opacity */
-    border-radius: 50%; /* Create a circle shape */
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.4
+  ); /* Circle background color with opacity */
+  border-radius: 50%; /* Create a circle shape */
 }
 
 .glass::before {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .glass::after {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-h2{
-    margin: 0;
-    text-align: center;
-    color: #333;
+h2 {
+  margin: 0;
+  text-align: center;
+  color: #333;
 }
 p.description {
   font-size: 20px;
