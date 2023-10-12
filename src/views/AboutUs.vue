@@ -55,7 +55,9 @@
           <p class="mt-12 story">
             Choose Kenwaves Solutions for IT expertise that transforms your
             challenges into opportunities and drives your business toward a
-            brighter, more efficient future. Kenwaves Solutions: Your Partner
+            brighter, more efficient future.
+            <br>
+             Kenwaves Solutions: Your Partner
             for Technological Empowerment and Success.
           </p>
         </div>
@@ -118,9 +120,16 @@ export default {
   text-transform: uppercase;
 }
 .story{
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+  align-items:center;
   text-align: center;
   color: hsl(0, 22%, 95%);
   font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
+}
+.hey{
+  text-align: center;
 }
 </style>
