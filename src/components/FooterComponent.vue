@@ -3,7 +3,7 @@
     <v-container>
       <v-row >
         <v-col lg="4" sm="12">
-          <div class="title mb-5">ABOUT</div>
+          <div class="title mb-2">ABOUT</div>
 
           <!-- <v-card class="text-center" width="100" height="100">
           <v-img
@@ -14,6 +14,11 @@
         </v-card> -->
 
           <h6 class="hello">
+            Choose Kenwaves Solutions for IT expertise that transforms yo
+            challenges into opportunities and drives your business toward
+            brighter, more efficient future. Kenwaves Solutions: Your Par
+            for Technological Empowerment and Success.
+           <br>
             Never give up,Believe in your self,Work smart,Its never too late
             !!!!!
           </h6>
